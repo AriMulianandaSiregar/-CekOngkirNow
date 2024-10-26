@@ -1,0 +1,33 @@
+langkah-langkah dalam membuat project:
+
+1. Membuat data model:
+    - Dengan command artisan: php artisan make:model Province -ms (-ms artinya dibuat beserta migration dan table seedernya)
+    - Dengan command artisan: php artisan make:model City -ms (-ms artinya dibuat beserta migration dan table seedernya)
+    - Dengan command artisan: php artisan make:model Courier -ms (-ms artinya dibuat beserta migration dan table seedernya)
+
+2. Design table migration didalam database->migration->... dengan menambahkan kolom-kolom yang ingin ditambahkan kedalam setiap table (province, city, courier)
+
+3. Lakukan migrate untuk kita import ke dalam database yang sudah kita buat : php artisan migrate
+
+----------------- Import data seed menggunakan file JSON -------------------
+
+4. Masukan file provinsi.json, kota.json, kabupaten.json kedalam directory database
+
+5. Panggil file-file json tersebut untuk dijadikan sebagai table seeder: (masukan data json ke dalam data seeder)
+    - Masukan kodingan kedalam setiap file seeder seperti di ProvinceSeeder.php, CitySeeder.php, CourierSeeder.php (untuk courier.php kodingannya kita tidak panggil dari json karena hanya ada 3 data kurir saja)
+
+6. Panggil 3 kelas seeder tadi kedalam kelas DatabaseSeeder.php
+    - $this->call(ProvinceSeeder::class);
+    - $this->call(CitySeeder::class);
+    - $this->call(CourierSeeder::class);
+
+7. Lakukan migrate ulang, karena kita sebelumnya telah melakuakn migrate, maka kita tambahkan opsi fresh agar melakukan pembersihan semua database atau table yang ada, dan tambahkan --seed (agar juga menambahkan data seedingnya)
+    - php artisan migrate:fresh --seed
+
+
+langkah-langkah menggunakan api rajaongkir untuk mengecek ongkos kirim:
+dokumentasi penggunaan di https://github.com/kavist/rajaongkir/
+
+1. install package kavist/rajaongkir, caranya:
+    - composer require kavist/rajaongkir:^1.1 --ignore-platform-reqs (tambahakn --ignore-plat.. agar php 8 bisa menginstall kavist/rajaongkir versi 1)
+2. isi RAJAONGKIR_API_KEY=isi_API_key_Anda_disini di file .env
