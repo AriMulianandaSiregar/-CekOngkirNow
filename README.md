@@ -1,12 +1,9 @@
-# DEMO WEB CITRADE
-_**ERD**_
-### Diagram ERD
-![ERD](https://github.com/AriMulianandaSiregar/CITrade/blob/main/Gambar%20Demo%20Aplikasi/Final%20Project%20ERD.png)
+# DEMO WEB Cek Ongkir
 
 _**Fitur Akun Pengguna**_
-### Langkah 1: register ke Web
-![Register Screen](https://github.com/AriMulianandaSiregar/CITrade/blob/main/Gambar%20Demo%20Aplikasi/register%20page.png)
+### Langkah 1: Pilih Destinasi Kota Tujuan dan Jasa Service
+![Setting Destination Screen](https://github.com/AriMulianandaSiregar/-CekOngkirNow/LaravelOngkir%20Gambar%20Demo%20Web/setting%20destination%20page.png)
 
-### Langkah 2: Login ke Web
-![Login Screen](https://github.com/AriMulianandaSiregar/CITrade/blob/main/Gambar%20Demo%20Aplikasi/login%20page.png)
+### Langkah 2: Menampilkan Informasi Harga Ongkir
+![Shipping Costs Screen](https://github.com/AriMulianandaSiregar/-CekOngkirNow/LaravelOngkir%20Gambar%20Demo%20Web/shipping%20costs%20page.png)
 
